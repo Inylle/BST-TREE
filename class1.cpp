@@ -27,14 +27,28 @@ public:
     }
     }
 
-    
+    // Wyświetlenie drzewa BST przy użyciu InOrder
+    void printInOrder(Tree* root) {
+    if (root == nullptr) {
+        return;
+    }
+
+    // Najpierw wypisz lewe poddrzewo
+    printInOrder(root->left);
+
+    // Następnie wypisz wartość bieżącego węzła
+    cout << root->data << " ";
+
+    // Na koniec wypisz prawe poddrzewo
+    printInOrder(root->right);
+    }
 
 
 int main() {
     
     //Tree* root = nullptr; // Inicjalizacja pustego drzewa
     //insertNode(root, 50);
-    
+    //printInOrder(root);
 
     return 0;
 }
