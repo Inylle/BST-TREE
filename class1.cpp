@@ -115,6 +115,7 @@ int main() {
     insertNode(root, 50);
     insertNode(root, 15);
     insertNode(root, 20);
+    insertNode(root, 10);
     printInOrder(root);
     deleteTree(root);
     deleteNode(root, 15);
