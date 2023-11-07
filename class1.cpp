@@ -1,33 +1,21 @@
+#include "class1.h"
 #include <iostream>
+
 using namespace std;
-
-// Klasa Tree
-
-class Tree {
-public:
-    int data;
-    Tree* left;
-    Tree* right;
-
-    // Konstruktor
-    Tree(int value) : data(value), left(nullptr), right(nullptr) {}
-
-};
-
+using namespace c1;
 
     // Dodawanie elementu do drzewa BST
     void insertNode(Tree*& root, int value) {
-    if (root == nullptr) {
-        root = new Tree(value);
-    } else {
-        if (value < root->data) {
-            insertNode(root->left, value);
-        } else if (value >= root->data) {
-            insertNode(root->right, value);
+        if (root == nullptr) {
+            root = new Tree(value);
+        } else {
+            if (value < root->data) {
+                insertNode(root->left, value);
+            } else if (value >= root->data) {
+                insertNode(root->right, value);
+            }
         }
     }
-    }
-
 
     // Wyświetlenie drzewa BST przy użyciu InOrder
     void printInOrder(Tree* root) {
@@ -101,17 +89,39 @@ public:
     return root;      
     }  
 
+    // szukanie drogi do elementu
+    void findPath(Tree* root, int value) {
+        if (root == nullptr) {
+            return;
+        }
+        if (value < root->data) {
+            cout << root->data << " ";
+            findPath(root->left, value);
+        } else if (value > root->data) {
+            cout << root->data << " ";
+            findPath(root->right, value);
+        } else {
+            cout << root->data << " ";
+        }
+    }
+
     
 
 int main() {
+
     /*
+    
     Tree* root = nullptr; // Inicjalizacja pustego drzewa
     insertNode(root, 50);
     insertNode(root, 15);
+    insertNode(root, 20);
     printInOrder(root);
     deleteTree(root);
     deleteNode(root, 15);
     printInOrder(root);
+    findPath(root, 20);
+
     */
+    
     return 0;
 }
