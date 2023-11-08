@@ -8,7 +8,6 @@
         void readfile();
         void readfilebinary();
         void savefilebinary();
-        std::ifstream file;
     };
 
 #endif

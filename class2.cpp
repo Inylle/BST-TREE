@@ -8,7 +8,7 @@
 using namespace std;
 
 
-// read form file
+// Odczytanie z pliku tekstowego
 
 void readfile(Tree*& root, string fileName) {
     ifstream file;
@@ -25,4 +25,8 @@ void readfile(Tree*& root, string fileName) {
     }
     printInOrder(root);
     file.close();
+}
+
+void readfilebinary(Tree*& root, string fileName){
+    // Task for Jaciesune | Get to it!
 }
