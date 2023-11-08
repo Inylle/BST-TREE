@@ -107,22 +107,3 @@ using namespace c1;
 
     
 
-int main() {
-
-    /*
-    
-    Tree* root = nullptr; // Inicjalizacja pustego drzewa
-    insertNode(root, 50);
-    insertNode(root, 15);
-    insertNode(root, 20);
-    insertNode(root, 10);
-    printInOrder(root);
-    deleteTree(root);
-    deleteNode(root, 15);
-    printInOrder(root);
-    findPath(root, 20);
-
-    */
-    
-    return 0;
-}

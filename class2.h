@@ -1,3 +1,4 @@
+#include <fstream>
 namespace c2{
 
     class BST{
@@ -5,6 +6,7 @@ namespace c2{
         void readfile();
         void readfilebinary();
         void savefilebinary();
+        std::ifstream file;
     };
-    
+
 }
