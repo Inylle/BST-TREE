@@ -76,9 +76,3 @@ void readfile(Tree*& root, string fileName) {
     }
 
     
-
-void savefilebinary(Tree*& root, const string& fileName){
-
-    // Task for Jaciesune | Get to it!
-    
-}
