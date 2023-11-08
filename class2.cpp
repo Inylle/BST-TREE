@@ -1,25 +1,28 @@
+#pragma once
 #include "class2.h"
+#include "class1.h"
+#include "class1.cpp"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
-using namespace c2;
 
-void readfile(){
+
+// read form file
+
+void readfile(Tree*& root, string fileName) {
     ifstream file;
-    file.open("data.txt");
-    if(!file.is_open()){
-        cout << "Nie można otworzyć pliku!" << endl;
+    file.open(fileName);
+
+    if (!file.is_open()) {
+        cout << "Nie udalo sie otworzyc pliku!" << endl;
+        return;
     }
-    else{
-        cout << "Plik otwarty!" << endl;
+
+    int value;
+    while (file >> value) {
+        insertNode(root, value);
     }
+    printInOrder(root);
     file.close();
-}
-
-
-int main() {
-    
-    readfile();
-
-    return 0;
 }

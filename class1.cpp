@@ -1,8 +1,9 @@
+#pragma once
 #include "class1.h"
 #include <iostream>
 
 using namespace std;
-using namespace c1;
+
 
     // Dodawanie elementu do drzewa BST
     void insertNode(Tree*& root, int value) {
@@ -104,6 +105,3 @@ using namespace c1;
             cout << root->data << " ";
         }
     }
-
-    
-
