@@ -26,3 +26,21 @@ void readfile(Tree*& root, string fileName) {
     printInOrder(root);
     file.close();
 }
+
+    void readfilebinary(Tree*& root, string fileName){
+        ifstream file;
+        file.open(fileName, ios::binary);
+
+        if (!file.is_open()) {
+            cout << "Nie udalo sie otworzyc pliku!" << endl;
+            return;
+        }
+
+        int value;
+        while (file >> value) {
+            insertNode(root, value);
+        }
+        printInOrder(root);
+        file.close();
+    }
+
