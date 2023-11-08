@@ -61,7 +61,8 @@ int main() {
                 break;
             }
             case 7: {
-                // Add code for reading from a file
+                cout << "Odczyt z pliku binarnego: " << endl;
+                readfilebinary(root, "binary1");
                 break;
             }
             case 8: {
