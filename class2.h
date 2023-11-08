@@ -5,9 +5,10 @@
 
     class BST {
     public:
-        void readfile();
-        void readfilebinary();
-        void savefilebinary();
+        void readfile(Tree*& root, string fileName);
+        void readfilebinary(Tree*& root, const string& fileName);
+        void savefilebinary(Tree*& root, const string& fileName);
+        void saveTreeToFile(Tree* root, std::ofstream& file);
     };
 
 #endif

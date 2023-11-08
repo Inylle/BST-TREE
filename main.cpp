@@ -57,7 +57,8 @@ int main() {
                 cout << endl;
                 break;
             case 6: {
-                // Add code for saving to a file
+                cout << "Zapis do pliku binarnego: " << endl;
+                savefilebinary(root, "dataToBinary.txt");
                 break;
             }
             case 7: {
@@ -67,7 +68,7 @@ int main() {
             }
             case 8: {
                 cout << "Odczyt z pliku tekstowego: " << endl;
-                readfile(root, "data.txt");
+                readfile(root, "dataToBinary.txt");
                 cout << endl;
                 break;
             }
