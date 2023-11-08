@@ -3,22 +3,27 @@
 
 #include <iostream>
 using namespace std;
-#include "class1.cpp"
-//#include "class2.cpp";
 
 
 
 int main() {
-    
-    cout << "Program Drzewo BST" << endl;
-    cout << "Wybierz opcje: " << endl;
-    cout << "1. Dodaj element" << endl;
-    cout << "2. Usun element" << endl;
-    cout << "3. Usun cale drzewo" << endl;
-    cout << "4. Szukaj drogi do podanego elementu" << endl;
-    cout << "5. Wyswietl drzewo" << endl;
-    cout << "6. Zapis do pliku" << endl;
-    cout << "7. Odczyt z pliku" << endl;
+    Tree* root = nullptr; // Initialize an empty tree
+
+    while (true) {
+        cout << "Program Drzewo BST" << endl;
+        cout << "Wybierz opcje: " << endl;
+        cout << "1. Dodaj element" << endl;
+        cout << "2. Usun element" << endl;
+        cout << "3. Usun cale drzewo" << endl;
+        cout << "4. Szukaj drogi do podanego elementu" << endl;
+        cout << "5. Wyswietl drzewo" << endl;
+        cout << "6. Zapis do pliku binarnego" << endl;
+        cout << "7. Odczyt z pliku binarnego" << endl;
+        cout << "8. Odczyt z pliku tekstowego" << endl;   
+        cout << "9. Wyjscie" << endl;
+
+        int choice;
+        cin >> choice;
 
         switch (choice) {
             case 1: {
@@ -59,12 +64,19 @@ int main() {
                 // Add code for reading from a file
                 break;
             }
-            case 8:
+            case 8: {
+                cout << "Odczyt z pliku tekstowego: " << endl;
+                readfile(root, "data.txt");
+                cout << endl;
+                break;
+            }
+            case 9:
                 // Exit the program
                 return 0;
             default:
                 cout << "Niepoprawna opcja. Wybierz ponownie." << endl;
         }
     }
+
     return 0;
 }
