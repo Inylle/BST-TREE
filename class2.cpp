@@ -45,3 +45,9 @@ void readfile(Tree*& root, string fileName) {
     printInOrder(root);
     std::cout << std::endl;
 }
+
+void savefilebinary(Tree*& root, const string& fileName){
+
+    // Task for Jaciesune | Get to it!
+    
+}
